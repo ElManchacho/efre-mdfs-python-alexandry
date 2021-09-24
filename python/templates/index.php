@@ -23,7 +23,17 @@
             </tr>
         </thead>
         <tbody>
-            
+            <tr>
+                <td> <a href="show_book">Table Data</a></td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+
     {% for book in data %}
         <tr>
         {% for attr in book %}
@@ -34,6 +44,7 @@
         </tbody>
     </table>
 
+    <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"><a href="create_book"> Ajouter un livre</a></button>
 
 
     <!-- Load script from uikit -->
