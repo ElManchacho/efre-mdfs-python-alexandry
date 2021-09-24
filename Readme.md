@@ -11,6 +11,11 @@ Fundamental methods such as GET, PUT, POST, and DELETE:
 - PUT method, you can update the existing books.
 - DELETE method, you can remove the books.
 
+## Explanatory diagram
+
+![Schema](assets/diagram/schema-api-alexandry.PNG) 
+
+
 ## ⚙ Installation
 
 To retrieve the project:
