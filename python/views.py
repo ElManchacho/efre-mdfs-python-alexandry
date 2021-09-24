@@ -6,9 +6,7 @@ fileName = './json/library.json'
 
 id = 1
 
-# DEFINTION OF METHODS TO SHOW LIST OF BOOK
-def index():
-
+def getAllBooks():
   books = []
 
   file = open(fileName, 'r')
@@ -21,7 +19,14 @@ def index():
   for key in data.keys():
     for book in data[key]:
       books.append(book)
-  return render_template('list_book.php', data = books)
+  
+  return books
+
+# DEFINTION OF METHODS TO SHOW LIST OF BOOK
+def index():
+
+  
+  return render_template('list_book.php', data = getAllBooks())
 
 
 # DEFINTION OF METHODS TO CREATE BOOK
@@ -47,4 +52,17 @@ def show_book(id=0):
 
 def delete_book(id=0):
 
-  return None
+  id = request.args.get("id", type = int)
+
+  with open(fileName) as data_file:
+    library = json.load(data_file)
+    for livres in library: 
+      for livre in library[livres] :
+        if (int(livre['id']) == id) :
+          del library[livres][library[livres].index(livre)]
+          break;
+    print(library)
+    with open(fileName, 'w') as data_file:
+     library = json.dump(library, data_file)
+    
+  return render_template('list_book.php', data = getAllBooks())
