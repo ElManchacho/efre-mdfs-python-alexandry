@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <h1> Voici tous le bouquin {{}} </h1>
+    <h1> Voici le bouquin {{data}} </h1>
 
     <!-- Load script from uikit -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit.min.js"></script>
