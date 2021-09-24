@@ -21,9 +21,16 @@ def index():
     for book in data[key]:
       books.append(book)
 
-  return render_template('index.php', data = books)
+  return render_template('index_book.php', data = books)
 
 def create_book():
+
+
+  return render_template('create_book.php')
+
+
+def show_book():
+
   id = 0
   retrivedBook = {}
   file = open(fileName, 'r')
@@ -38,9 +45,4 @@ def create_book():
       #if book[key][id] == 0:
         #retrivedBook.append(book)
       retrivedBook = {}
-
-  return render_template('create.php', data = retrivedBook)
-
-
-def show_book():
-  return render_template('show.php')
+  return render_template('show_book.php', data = retrivedBook)
