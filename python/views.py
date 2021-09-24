@@ -1,3 +1,4 @@
+import random
 from flask import render_template, request
 import json
 
@@ -38,7 +39,16 @@ def create_book():
   print(name)
   print(author)
 
-  return "Vous avez bien créer un livre !"
+  with open(fileName) as data_file:
+    library = json.load(data_file)
+    for livres in library: 
+
+      library[livres].append({"id": random.randint(0,100000), "nom": name, "auteur": author})
+
+    with open(fileName, 'w') as data_file:
+     library = json.dump(library, data_file)
+
+  return render_template('when_create_book.php', name = name, author = author)
 
 def show_book(id=0):
   id = request.args.get("id", type = int)
