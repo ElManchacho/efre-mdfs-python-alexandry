@@ -27,7 +27,11 @@
     {% for book in data %}
         <tr>
         {% for attr in book %}
-                <td> <a href="show_book"> {{book[attr]}} </a></td>
+                {%if attr == "nom"%}
+                <td> <a href="show_book?id={{book['id']}}"> {{book[attr]}} </a></td>
+                {%else%}
+                <td> {{book[attr]}} </td>
+                {%endif%}
             {% endfor %}
         </tr>
     {% endfor %}

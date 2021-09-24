@@ -16,18 +16,10 @@
     <form>
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">📖 Nom du livre</legend>
+            <legend class="uk-legend">📖 {{data["nom"]}}</legend>
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Nom du livre">
-            </div>
-
-            <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Auteur du livre">
-            </div>
-
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="Description"></textarea>
+                <input class="uk-input" type="text" placeholder='{{data["auteur"]}}'>
             </div>
 
         </fieldset>
