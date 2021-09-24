@@ -17,12 +17,5 @@ def index():
   for key in data.keys():
     for book in data[key]:
       books.append(book)
-  print(books)
   return render_template('index.php', data = books)
-
-# def get_books():
-
-
-  
-#   return json.dumps()
 
