@@ -13,26 +13,31 @@
 </head>
 <body>
 
-    <form>
+    <form method="POSt" action="{{ url_for('update_book')}}">
         <fieldset class="uk-fieldset">
 
+        <div class="uk-margin">
+                <input class="uk-input" style="visibility: hidden" type="text" value="{{data['id']}}" name='id'>
+            </div>
+
             <legend class="uk-legend">📖 Le livre en question !</legend>
+            <div class="uk-margin">
+                <input class="uk-input" type="text" value="{{data['nom']}}" name='name'>
+            </div>
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" value='{{data["nom"]}}'>
-                <input class="uk-input" type="text" value='{{data["auteur"]}}'>
+                <input class="uk-input" type="text" value="{{data['auteur']}}" name='author'>
             </div>
 
         </fieldset>
-       
-        <p uk-margin>
-            <button class="uk-button uk-button-default"><a href=""> 💾 Modifier le livre </a></button>
-        </p>
 
-        <p uk-margin>
+        <input class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" type="submit" value="🎉 Valider le formulaire">
+    </form>
+
+    
+    <p uk-margin>
             <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
         </p>
-    </form>
 
     <p uk-margin>
             <button class="uk-button uk-button-default"><a href="delete_book?id={{data['id']}}"> 🗑 Supprimer le livre </a></button>
