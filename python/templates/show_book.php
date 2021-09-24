@@ -24,10 +24,14 @@
             </div>
 
         </fieldset>
-
+       
         <p uk-margin>
             <button class="uk-button uk-button-default"><a href=""> 💾 Modifier le livre </a></button>
             <button class="uk-button uk-button-default"><a href=""> 🗑 Supprimer le livre </a></button>
+        </p>
+
+        <p uk-margin>
+            <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
         </p>
     </form>
 
