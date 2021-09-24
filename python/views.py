@@ -6,6 +6,9 @@ fileName = '../json/library.json'
 def index():
     return render_template('index.html')
 
+def book(id):
+    return render_template('book.html')
+
 def get_books():
 
   books = []
