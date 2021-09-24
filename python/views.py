@@ -24,9 +24,11 @@ def get_books():
     for book in data[key]:
       books.append(book)
 
-  get_book_view()
-  
-  return json.dumps(books)
+  return render_template('index.php')
 
-def get_book_view():
-    return render_template('books.html')
+# def get_books():
+
+
+  
+#   return json.dumps()
+
