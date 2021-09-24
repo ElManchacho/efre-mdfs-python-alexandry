@@ -21,7 +21,7 @@ git clone https://github.com/ElManchacho/efre-mdfs-python-alexandry.git
 
 For this projet we use [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
-For this project :
+For this project we use librairies like :
 
 - We use flask :
 
