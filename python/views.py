@@ -4,7 +4,7 @@ import json
 fileName = '../json/library.json'
 
 def index():
-    return render_template('index.html')
+    return render_template('index.php')
 
 def book(id):
     return render_template('book.html')
