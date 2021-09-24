@@ -2,8 +2,8 @@ import random
 from flask import render_template, request
 import json
 
-#fileName = './json/library.json'
-fileName = '../json/library.json'
+fileName = './json/library.json'
+#fileName = '../json/library.json'
 
 id = 1
 
