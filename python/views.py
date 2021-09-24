@@ -2,8 +2,8 @@ import random
 from flask import render_template, request
 import json
 
-#fileName = './json/library.json'
-fileName = '../json/library.json'
+fileName = './json/library.json'
+#fileName = '../json/library.json'
 
 id = 1
 
@@ -40,8 +40,6 @@ def create_book():
   name = request.form.get('name')
   author = request.form.get('author')
 
-  print(name)
-  print(author)
 
   with open(fileName) as data_file:
     library = json.load(data_file)
@@ -53,6 +51,25 @@ def create_book():
      library = json.dump(library, data_file)
 
   return render_template('when_create_book.php', name = name, author = author)
+
+def update_book():
+
+  id = request.form.get('id')
+  name = request.form.get('name')
+  author = request.form.get('author')
+  with open(fileName) as data_file:
+    library = json.load(data_file)
+    for livres in library: 
+      for livre in library[livres] :
+        if (int(livre['id']) == int(id)) :
+          bookToUpdate = library[livres][library[livres].index(livre)]
+          bookToUpdate['auteur'] = author
+          bookToUpdate['nom'] = name
+          break;
+    with open(fileName, 'w') as data_file:
+     library = json.dump(library, data_file)
+    
+  return render_template('list_book.php', data = getAllBooks())
 
 
 # DEFINTION OF METHODS TO SHOW ONE BOOK
@@ -85,7 +102,6 @@ def delete_book(id=0):
         if (int(livre['id']) == id) :
           del library[livres][library[livres].index(livre)]
           break;
-    print(library)
     with open(fileName, 'w') as data_file:
      library = json.dump(library, data_file)
     

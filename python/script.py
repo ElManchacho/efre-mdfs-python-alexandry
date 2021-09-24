@@ -18,5 +18,8 @@ app.add_url_rule('/show_book', view_func=views.show_book)
 # ROUTE FOR /delete_book TO DELETE ONE BOOK
 app.add_url_rule('/delete_book', view_func=views.delete_book)
 
+# ROUTE FOR /update_book TO UPDATE ONE BOOK
+app.add_url_rule('/update_book', view_func=views.update_book, methods = ['POST'])
+
 if __name__ == '__main__':
   app.run(debug=True) 
