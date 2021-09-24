@@ -4,6 +4,7 @@ import json
 fileName = '../json/library.json'
 
 def index():
+
     return render_template('index.html')
 
 def book(id):
@@ -24,9 +25,12 @@ def get_books():
     for book in data[key]:
       books.append(book)
 
-  get_book_view()
-  
-  return json.dumps(books)
+  return render_template('index.php')
 
-def get_book_view():
-    return render_template('books.html')
+def create_book():
+  return render_template('create.php')
+
+
+def show_book():
+  return render_template('show.php')
+
