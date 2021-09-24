@@ -44,6 +44,3 @@ def create_book():
 
 def show_book():
   return render_template('show.php')
-
-
-  #return render_template('index.php', data = books)
