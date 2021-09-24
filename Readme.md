@@ -21,7 +21,9 @@ git clone https://github.com/ElManchacho/efre-mdfs-python-alexandry.git
 
 For this projet we use [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
-To install flask :
+For this project :
+
+- We use flask :
 
 ```bash
 pip install flask
@@ -32,6 +34,8 @@ or
 ```bash
 py -m pip install flask
 ```
+
+- We use [GetUI](https://getuikit.com/)
 
 ## 📞 License
 
