@@ -16,28 +16,20 @@
     <h1> 📚 Hello Alexandry  </h1>
     <table class="uk-table">
         <thead>
+        {% for book in data %}
             <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Auteur</th>
+            {% for attr in book %}
+                    <th> <a href="show_book"> {{attr}} </a></th>
+                {% endfor %}
             </tr>
+        {% endfor %}
         </thead>
         <tbody>
-            <tr>
-                <td> <a href="show_book">Table Data</a></td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
 
     {% for book in data %}
         <tr>
         {% for attr in book %}
-                <td>{{book[attr]}}</td>
+                <td> <a href="show_book"> {{book[attr]}} </a></td>
             {% endfor %}
         </tr>
     {% endfor %}
