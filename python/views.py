@@ -2,11 +2,12 @@ import random
 from flask import render_template, request
 import json
 
-fileName = './json/library.json'
-#fileName = '../json/library.json'
+#fileName = './json/library.json'
+fileName = '../json/library.json'
 
 id = 1
 
+# DEFINTION OF METHODS TO GET ALL BOOKS
 def getAllBooks():
   books = []
 
@@ -25,8 +26,6 @@ def getAllBooks():
 
 # DEFINTION OF METHODS TO SHOW LIST OF BOOK
 def index():
-
-  
   return render_template('list_book.php', data = getAllBooks())
 
 
@@ -72,6 +71,8 @@ def update_book():
     
   return render_template('list_book.php', data = getAllBooks())
 
+
+# DEFINTION OF METHODS TO SHOW ONE BOOK
 def show_book(id=0):
   id = request.args.get("id", type = int)
   retrivedBook = {}
@@ -88,6 +89,8 @@ def show_book(id=0):
         retrivedBook.update(book)
   return render_template('show_book.php', data = retrivedBook)
 
+
+# DEFINTION OF METHODS TO DELETE ONE BOOK
 def delete_book(id=0):
 
   id = request.args.get("id", type = int)
