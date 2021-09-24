@@ -5,10 +5,7 @@ fileName = '../json/library.json'
 
 def index():
 
-    return render_template('index.html')
-
-def book(id):
-    return render_template('book.html')
+    return render_template('index.php')
 
 def get_books():
 
@@ -25,6 +22,7 @@ def get_books():
     for book in data[key]:
       books.append(book)
 
+
   return render_template('index.php')
 
 def create_book():
@@ -34,6 +32,5 @@ def create_book():
 def show_book():
   return render_template('show.php')
 
-  return render_template('index.php', data = books)
 
 
