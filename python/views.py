@@ -1,8 +1,8 @@
-from flask import render_template
+from flask import render_template, request
 import json
 
-# fileName = './json/library.json'
-fileName = '../json/library.json'
+fileName = './json/library.json'
+#fileName = '../json/library.json'
 
 id = 1
 
@@ -20,7 +20,6 @@ def index():
   for key in data.keys():
     for book in data[key]:
       books.append(book)
-
   return render_template('list_book.php', data = books)
 
 def create_book():
@@ -29,9 +28,8 @@ def create_book():
   return render_template('create_book.php')
 
 
-def show_book():
-
-  id = 0
+def show_book(id=0):
+  id = request.args.get("id", type = int)
   retrivedBook = {}
   file = open(fileName, 'r')
   data = json.load(file)
@@ -42,7 +40,10 @@ def show_book():
 
   for key in data.keys():
     for book in data[key]:
-      #if book[key][id] == 0:
-        #retrivedBook.append(book)
-      retrivedBook = {}
+      if int(book["id"]) == id :
+        retrivedBook.update(book)
   return render_template('show_book.php', data = retrivedBook)
+
+def delete_book(id=0):
+
+  return None
