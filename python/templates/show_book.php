@@ -16,16 +16,21 @@
     <form>
         <fieldset class="uk-fieldset">
 
-            <legend class="uk-legend">📖 {{data["nom"]}}</legend>
+            <legend class="uk-legend">📖 Le livre en question !</legend>
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder='{{data["auteur"]}}'>
+                <input class="uk-input" type="text" value='{{data["nom"]}}'>
+                <input class="uk-input" type="text" value='{{data["auteur"]}}'>
             </div>
 
         </fieldset>
-
+       
         <p uk-margin>
             <button class="uk-button uk-button-default"><a href=""> 💾 Modifier le livre </a></button>
+        </p>
+
+        <p uk-margin>
+            <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
         </p>
     </form>
 

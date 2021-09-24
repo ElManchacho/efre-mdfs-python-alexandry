@@ -29,10 +29,21 @@ def index():
   return render_template('list_book.php', data = getAllBooks())
 
 
-# DEFINTION OF METHODS TO CREATE BOOK
-def create_book():
+# DEFINTION OF METHODS TO SHOW FROM CREATE BOOK
+def show_form_create_book():
   return render_template('create_book.php')
 
+
+# DEFINTION OF METHODS TO CREATE BOOK
+def create_book():
+
+  name = request.form.get('name')
+  author = request.form.get('author')
+
+  print(name)
+  print(author)
+
+  return "Vous avez bien créer un livre !"
 
 def show_book(id=0):
   id = request.args.get("id", type = int)
