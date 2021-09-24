@@ -17,31 +17,23 @@
     <table class="uk-table">
         <thead>
             <tr>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Auteur</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-            </tr>
-        </tfoot>
         <tbody>
-            <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
-            <tr>
-                <td>Table Data</td>
-                <td>Table Data</td>
-                <td>Table Data</td>
-            </tr>
+            
+    {% for book in data %}
+        <tr>
+        {% for attr in book %}
+                <td>{{book[attr]}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
         </tbody>
     </table>
+
 
 
     <!-- Load script from uikit -->
