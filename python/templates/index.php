@@ -16,13 +16,11 @@
     <h1> 📚 Hello Alexandry  </h1>
     <table class="uk-table">
         <thead>
-        {% for book in data %}
             <tr>
-            {% for attr in book %}
-                    <th> <a href="show_book"> {{attr}} </a></th>
-                {% endfor %}
+                    <th>Id</th>
+                    <th>Titre</th>
+                    <th>Auteur</th>
             </tr>
-        {% endfor %}
         </thead>
         <tbody>
 
