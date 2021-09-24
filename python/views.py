@@ -9,6 +9,7 @@ def index():
     return render_template('index.html')
 
 def get_books():
+
   file = open(fileName, 'r')
   data = json.load(file)
   file.close()
@@ -20,4 +21,6 @@ def get_books():
     for book in data[key]:
       books.append(book)
 
+  render_template('books.html')
   return json.dumps(books)
+
