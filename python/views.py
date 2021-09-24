@@ -1,9 +1,7 @@
 from flask import render_template
 import json
 
-books = []
-
-fileName = './json/library.json'
+fileName = '../json/library.json'
 
 def index():
     return render_template('index.html')
@@ -12,6 +10,8 @@ def book(id):
     return render_template('book.html')
 
 def get_books():
+
+  books = []
 
   file = open(fileName, 'r')
   data = json.load(file)
@@ -24,6 +24,9 @@ def get_books():
     for book in data[key]:
       books.append(book)
 
-  render_template('books.html')
+  get_book_view()
+  
   return json.dumps(books)
 
+def get_book_view():
+    return render_template('books.html')
