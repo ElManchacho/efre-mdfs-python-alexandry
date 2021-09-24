@@ -21,7 +21,7 @@ def index():
     for book in data[key]:
       books.append(book)
 
-  return render_template('index_book.php', data = books)
+  return render_template('list_book.php', data = books)
 
 def create_book():
 
