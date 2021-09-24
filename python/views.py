@@ -7,4 +7,5 @@ def index():
     return render_template('index.html')
 
 def get_books():
-  return json.dumps(books)
+    return render_template('books.html')
+    return json.dumps(books)
