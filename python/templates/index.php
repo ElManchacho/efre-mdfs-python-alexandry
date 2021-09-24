@@ -17,18 +17,11 @@
     <table class="uk-table">
         <thead>
             <tr>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
-                <th>Table Heading</th>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Auteur</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-                <td>Table Footer</td>
-            </tr>
-        </tfoot>
         <tbody>
             <tr>
                 <td> <a href="show_book">Table Data</a></td>
@@ -40,10 +33,19 @@
                 <td>Table Data</td>
                 <td>Table Data</td>
             </tr>
+
+    {% for book in data %}
+        <tr>
+        {% for attr in book %}
+                <td>{{book[attr]}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
         </tbody>
     </table>
 
     <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"><a href="create_book"> Ajouter un livre</a></button>
+
 
     <!-- Load script from uikit -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit.min.js"></script>
