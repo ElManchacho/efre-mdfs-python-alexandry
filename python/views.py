@@ -20,9 +20,10 @@ def index():
 
   return render_template('index.php')
 
-# def get_books():
+def create_book():
+  return render_template('create.php')
 
 
-  
-#   return json.dumps()
+def show_book():
+  return render_template('show.php')
 
