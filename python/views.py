@@ -6,6 +6,7 @@ fileName = './json/library.json'
 
 id = 1
 
+# DEFINTION OF METHODS TO SHOW LIST OF BOOK
 def index():
 
   books = []
@@ -22,9 +23,9 @@ def index():
       books.append(book)
   return render_template('list_book.php', data = books)
 
+
+# DEFINTION OF METHODS TO CREATE BOOK
 def create_book():
-
-
   return render_template('create_book.php')
 
 
