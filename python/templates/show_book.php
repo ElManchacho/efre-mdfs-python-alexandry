@@ -30,13 +30,15 @@
         </p>
 
         <p uk-margin>
-            <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
+        <button class="uk-button uk-button-default"><a href="delete_book?id={{data['id']}}"> 🗑 Supprimer le livre </a></button>
         </p>
     </form>
 
+    <!-- INPUT TO BACK TO HOME -->
     <p uk-margin>
-            <button class="uk-button uk-button-default"><a href="delete_book?id={{data['id']}}"> 🗑 Supprimer le livre </a></button>
-        </p>
+        <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
+    </p>
+
 
     <!-- Load script from uikit -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.4/dist/js/uikit.min.js"></script>

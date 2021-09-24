@@ -12,6 +12,7 @@
 </head>
 <body>
     
+    <!-- FORM WITH ACTION TO NEW URL AND SUBMIT FOR CREATE BOOK -->
     <form method="POST" action="{{ url_for('create_book') }}">
         <fieldset class="uk-fieldset">
 
@@ -27,9 +28,11 @@
 
         </fieldset>
 
+        <!-- INPUT TO SUBMIT FOR ACTION CREATE BOOK -->
         <input class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" type="submit" value="🎉 Valider le formulaire">
     </form>
 
+    <!-- INPUT TO BACK TO HOME -->
     <p uk-margin>
         <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
     </p>

@@ -42,6 +42,13 @@ py -m pip install flask
 
 - We use [GetUI](https://getuikit.com/)
 
+## Source of problems
+Someting we have probleme with src of json : 
+[filename](python/views.py)
+
+In line 5 & 6
+
+
 ## 📞 License
 
 Author : 

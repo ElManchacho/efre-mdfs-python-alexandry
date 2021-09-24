@@ -17,6 +17,7 @@
     <p> Name : {{name}}</p>
     <p> Auteur : {{author}}</p>
 
+    <!-- INPUT TO BACK TO HOME -->
     <p uk-margin>
         <button class="uk-button uk-button-default"><a href="/"> 🏠 Revenir à l'accueil </a></button>
     </p>
