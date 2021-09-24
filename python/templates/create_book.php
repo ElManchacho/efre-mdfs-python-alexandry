@@ -12,26 +12,22 @@
 </head>
 <body>
     
-    <form>
+    <form method="POST" action='/create_book'>
         <fieldset class="uk-fieldset">
 
             <legend class="uk-legend">📖 Ajouter un livre</legend>
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Nom du livre">
+                <input class="uk-input" type="text" placeholder="Nom du livre" name='name'>
             </div>
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="Auteur du livre">
-            </div>
-
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="Description"></textarea>
+                <input class="uk-input" type="text" placeholder="Auteur du livre" name='author'>
             </div>
 
         </fieldset>
 
-        <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"><a href="create_book"> 🎉 Créer le livre</a></button>
+        <input class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom" type="submit" value="🎉 Créer le livre">
     </form>
 
     <!-- Load script from uikit -->

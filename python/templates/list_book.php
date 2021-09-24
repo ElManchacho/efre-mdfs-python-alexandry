@@ -34,7 +34,7 @@
         </tbody>
     </table>
 
-    <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"><a href="create_book"> Ajouter un livre</a></button>
+    <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom"><a href="show_form_create_book"> Ajouter un livre</a></button>
 
 
     <!-- Load script from uikit -->
